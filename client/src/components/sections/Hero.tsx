@@ -14,8 +14,11 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight text-[#1F2937]">
-              Étudiant en <span className="text-primary">Réseaux</span> et <span className="text-primary">Télécommunications</span>
+              Mathis Torres
             </h1>
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4 leading-tight text-[#1F2937]">
+              Étudiant en <span className="text-primary">Réseaux</span> et <span className="text-primary">Télécommunications</span>
+            </h2>
             <p className="text-lg text-gray-600 mb-6">
               Passionné par les technologies de réseau et les solutions de communication modernes. 
               Je développe mes compétences techniques pour construire l'infrastructure numérique de demain.
@@ -47,7 +50,7 @@ export default function Hero() {
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-blue-100 flex items-center justify-center">
               <Avatar className="w-60 h-60 md:w-72 md:h-72 border-4 border-white shadow-lg">
                 <AvatarImage src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Photo de profil" />
-                <AvatarFallback className="text-4xl">JD</AvatarFallback>
+                <AvatarFallback className="text-4xl">MT</AvatarFallback>
               </Avatar>
             </div>
           </motion.div>

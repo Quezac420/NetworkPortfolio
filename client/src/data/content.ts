@@ -53,12 +53,8 @@ export const certifications = [
     issuer: "Cisco Certified Network Associate"
   },
   {
-    title: "Linux Essentials",
-    issuer: "Linux Professional Institute"
-  },
-  {
-    title: "AWS Cloud Practitioner",
-    issuer: "Amazon Web Services"
+    title: "Stormshield Network Security",
+    issuer: "Stormshield Certified Administrator"
   }
 ];
 
