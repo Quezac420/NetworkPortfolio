@@ -5,7 +5,9 @@ import { technicalSkills, developmentSkills, certifications } from "@/data/conte
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-16 bg-gray-50">
+    <section id="skills" className="py-16 bg-gradient-to-b from-red-50 to-red-100 relative">
+      <div className="absolute top-0 left-0 w-full h-2 bg-red-600"></div>
+      <div className="absolute bottom-0 left-0 w-full h-2 bg-red-600"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -13,7 +15,10 @@ export default function Skills() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold mb-12 text-center">Mes compétences</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center">Mes compétences</h2>
+          <p className="text-center mb-12 max-w-3xl mx-auto text-gray-700">
+            Spécialiste en <span className="font-bold text-red-600">administration système et réseau</span>, je maîtrise les technologies clés pour construire et maintenir des infrastructures IT robustes et sécurisées.
+          </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <div>
@@ -23,6 +28,7 @@ export default function Skills() {
                   key={index}
                   name={skill.name}
                   percentage={skill.percentage}
+                  color={skill.color}
                 />
               ))}
             </div>
