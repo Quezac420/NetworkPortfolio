@@ -110,9 +110,9 @@ export default function Contact() {
                 <CardContent className="pt-6">
                   <h4 className="font-semibold mb-4">Disponibilité</h4>
                   <p className="text-gray-600">
-                    Je suis actuellement à la recherche d'un stage en réseaux et télécommunications 
-                    pour une durée de 3 mois à partir de mai 2024. N'hésitez pas à me contacter pour 
-                    discuter de toute opportunité.
+                    Je suis actuellement à la recherche d'une alternance en réseaux et télécommunications.
+                    N'hésitez pas à me contacter pour discuter de toute opportunité professionnelle qui
+                    me permettrait de développer mes compétences tout en poursuivant ma formation.
                   </p>
                 </CardContent>
               </Card>
