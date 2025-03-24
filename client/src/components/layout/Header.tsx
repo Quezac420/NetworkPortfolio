@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 import { Link } from "wouter";
+import { DeadpoolLogo } from "@/components/ui/deadpool-logo";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -27,7 +28,10 @@ export default function Header() {
     <header className={`fixed w-full bg-white ${isScrolled ? "bg-opacity-95 shadow-sm" : "bg-opacity-95"} z-50 transition-all duration-300`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <a href="#home" className="text-xl font-bold text-primary">Mon Portfolio</a>
+          <a href="#home" className="flex items-center space-x-2">
+            <DeadpoolLogo className="h-8 w-8" />
+            <span className="text-xl font-bold text-primary">Mathis Torres</span>
+          </a>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
