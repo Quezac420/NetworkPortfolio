@@ -103,22 +103,7 @@ export default function Contact() {
                   </div>
                 </div>
                 
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 text-primary mt-1">
-                    <GithubIcon className="h-6 w-6" />
-                  </div>
-                  <div className="ml-3">
-                    <p className="text-gray-700">GitHub</p>
-                    <a 
-                      href="https://github.com/username" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-primary hover:text-[#1E40AF]"
-                    >
-                      github.com/username
-                    </a>
-                  </div>
-                </div>
+
               </div>
               
               <Card className="mt-8">
