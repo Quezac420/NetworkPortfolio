@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DeadpoolBackground } from "@/components/ui/deadpool-background";
 import { DeadpoolLogo } from "@/components/ui/deadpool-logo";
 import { Server, Shield, Music } from "lucide-react";
@@ -70,13 +69,16 @@ export default function Hero() {
           >
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full flex items-center justify-center">
               <div className="absolute inset-0 rounded-full border-4 border-red-600 animate-pulse"></div>
-              <Avatar className="w-60 h-60 md:w-72 md:h-72 border-4 border-white shadow-lg relative">
-                <AvatarImage src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Photo de profil" />
-                <AvatarFallback className="text-4xl font-bold bg-gradient-to-r from-red-600 to-red-800 text-white">MT</AvatarFallback>
+              <div className="w-60 h-60 md:w-72 md:h-72 border-4 border-white shadow-lg rounded-full relative overflow-hidden bg-red-600">
+                <img 
+                  src="https://i.imgur.com/fOIwj0K.png" 
+                  alt="Deadpool" 
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute bottom-0 right-0 bg-red-600 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg border-2 border-white">
                   <Music className="h-6 w-6" />
                 </div>
-              </Avatar>
+              </div>
             </div>
           </motion.div>
         </div>
