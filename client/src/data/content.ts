@@ -1,24 +1,26 @@
 // Technical Skills
 export const technicalSkills = [
   {
-    name: "Réseaux informatiques",
-    percentage: 90
+    name: "Administration système",
+    percentage: 90,
+    color: "bg-red-500" // Couleur Deadpool
+  },
+  {
+    name: "Administration réseau",
+    percentage: 90,
+    color: "bg-red-600" // Couleur Deadpool
   },
   {
     name: "Sécurité informatique",
     percentage: 85
   },
   {
-    name: "Administration système",
-    percentage: 80
-  },
-  {
-    name: "Protocoles de routage",
+    name: "Monitoring & Alerting",
     percentage: 85
   },
   {
-    name: "Virtualisation",
-    percentage: 75
+    name: "Virtualisation & Conteneurisation",
+    percentage: 80
   }
 ];
 

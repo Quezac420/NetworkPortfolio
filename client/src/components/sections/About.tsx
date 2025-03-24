@@ -21,9 +21,7 @@ export default function About() {
               infrastructures de communication.
             </p>
             <p>
-              Ma formation me permet de maîtriser à la fois les aspects théoriques et pratiques des réseaux 
-              informatiques, de la cybersécurité, et des solutions de télécommunications modernes. Je m'intéresse
-              particulièrement à la virtualisation des réseaux et aux technologies cloud.
+              <strong className="text-primary">Spécialisé en administration système et réseau</strong>, je maîtrise à la fois les aspects théoriques et pratiques des infrastructures informatiques, de la cybersécurité, et des solutions de télécommunications modernes. Je m'intéresse particulièrement à la sécurisation des réseaux, à la mise en place de solutions de monitoring et à l'automatisation des tâches d'administration.
             </p>
             <p>
               En dehors de mes études, je développe mes compétences en programmation et en automatisation
