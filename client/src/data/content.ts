@@ -39,10 +39,6 @@ export const developmentSkills = [
     percentage: 70
   },
   {
-    name: "JavaScript",
-    percentage: 60
-  },
-  {
     name: "SQL",
     percentage: 75
   }

@@ -72,7 +72,7 @@ export default function About() {
                   <div>
                     <div className="flex items-center mb-1">
                       <CalendarDays className="h-4 w-4 text-red-600 mr-2" />
-                      <p className="font-medium text-red-700">2022 - Présent</p>
+                      <p className="font-medium text-red-700">2023 - Présent</p>
                     </div>
                     <p className="font-bold text-gray-800">BUT Réseaux et Télécommunications</p>
                     <p className="text-sm text-gray-600">Université de Technologie</p>
@@ -83,9 +83,9 @@ export default function About() {
                   <div>
                     <div className="flex items-center mb-1">
                       <CalendarDays className="h-4 w-4 text-red-600 mr-2" />
-                      <p className="font-medium text-red-700">2022</p>
+                      <p className="font-medium text-red-700">2023</p>
                     </div>
-                    <p className="font-bold text-gray-800">Baccalauréat Scientifique option Sciences de l'Ingénieur</p>
+                    <p className="font-bold text-gray-800">Baccalauréat MATHS NSI</p>
                     <p className="text-sm text-gray-600">Lycée Général</p>
                   </div>
                 </li>
