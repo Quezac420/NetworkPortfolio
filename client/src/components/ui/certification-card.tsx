@@ -1,4 +1,5 @@
-import { CheckCircle } from "lucide-react";
+import { Award } from "lucide-react";
+import { DeadpoolLogo } from "./deadpool-logo";
 
 interface CertificationCardProps {
   title: string;
@@ -7,11 +8,14 @@ interface CertificationCardProps {
 
 export function CertificationCard({ title, issuer }: CertificationCardProps) {
   return (
-    <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-      <div className="text-primary mb-2">
-        <CheckCircle className="h-6 w-6" />
+    <div className="bg-white p-5 rounded-lg shadow-md border-2 border-red-500 hover:shadow-lg transition-all transform hover:-translate-y-1">
+      <div className="flex justify-between items-start mb-3">
+        <div className="text-red-600">
+          <Award className="h-6 w-6" />
+        </div>
+        <DeadpoolLogo className="h-5 w-5 opacity-50" />
       </div>
-      <h4 className="font-medium text-gray-800">{title}</h4>
+      <h4 className="font-bold text-gray-800 mb-1">{title}</h4>
       <p className="text-sm text-gray-500">{issuer}</p>
     </div>
   );
