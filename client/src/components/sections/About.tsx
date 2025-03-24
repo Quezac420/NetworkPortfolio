@@ -27,8 +27,9 @@ export default function About() {
             </p>
             <p>
               En dehors de mes études, je développe mes compétences en programmation et en automatisation
-              des infrastructures. Je suis constamment à la recherche de nouveaux défis qui me permettent
-              d'approfondir mes connaissances et de contribuer à des projets innovants.
+              des infrastructures. Je suis également passionné de musique et un grand fan de Deadpool !
+              Je suis constamment à la recherche de nouveaux défis qui me permettent d'approfondir mes 
+              connaissances et de contribuer à des projets innovants.
             </p>
           </div>
           
