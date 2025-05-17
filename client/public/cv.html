@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Mathis Torres</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #cc0000;
+            padding-bottom: 10px;
+        }
+        h1 {
+            color: #cc0000;
+            margin-bottom: 5px;
+        }
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        h2 {
+            color: #cc0000;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .job, .education {
+            margin-bottom: 15px;
+        }
+        .job-title, .degree {
+            font-weight: bold;
+        }
+        .company, .school {
+            font-style: italic;
+        }
+        .date {
+            color: #666;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill {
+            background-color: #f8f8f8;
+            padding: 5px 10px;
+            border-radius: 3px;
+            border: 1px solid #eee;
+        }
+        .certification {
+            margin-bottom: 8px;
+        }
+        @media print {
+            body {
+                padding: 0;
+            }
+            .print-button {
+                display: none;
+            }
+        }
+        .print-button {
+            background-color: #cc0000;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+        .logo {
+            color: #cc0000;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button" onclick="window.print()">Imprimer le CV</button>
+    
+    <div class="header">
+        <h1>Mathis Torres</h1>
+        <p>Étudiant en Réseaux et Télécommunications</p>
+    </div>
+    
+    <div class="contact-info">
+        <p>📧 mathis.torres@example.com | 📱 06 XX XX XX XX | 📍 France</p>
+    </div>
+    
+    <div class="section">
+        <h2>PROFIL</h2>
+        <p>Étudiant passionné en deuxième année de Réseaux et Télécommunications, spécialisé dans l'administration réseau et la sécurité des systèmes d'information. Recherche une alternance pour mettre en pratique mes compétences techniques dans un environnement professionnel.</p>
+    </div>
+    
+    <div class="section">
+        <h2>FORMATION</h2>
+        <div class="education">
+            <div class="degree">BUT Réseaux et Télécommunications</div>
+            <div class="school">IUT de XXX</div>
+            <div class="date">2023 - présent</div>
+        </div>
+        <div class="education">
+            <div class="degree">Baccalauréat MATHS NSI sans option SI</div>
+            <div class="school">Lycée XXX</div>
+            <div class="date">2023</div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>COMPÉTENCES TECHNIQUES</h2>
+        <div class="skills-list">
+            <span class="skill">Administration système</span>
+            <span class="skill">Administration réseau</span>
+            <span class="skill">Sécurité informatique</span>
+            <span class="skill">Monitoring & Alerting</span>
+            <span class="skill">Virtualisation & Conteneurisation</span>
+            <span class="skill">Python</span>
+            <span class="skill">Shell Script</span>
+            <span class="skill">HTML/CSS</span>
+            <span class="skill">SQL</span>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>PROJETS ACADÉMIQUES</h2>
+        <div class="job">
+            <div class="job-title">Configuration d'un réseau d'entreprise</div>
+            <p>Conception et implémentation d'une infrastructure réseau complète pour une PME, incluant la segmentation VLAN, le routage inter-VLAN et la mise en place de politiques de sécurité.</p>
+        </div>
+        <div class="job">
+            <div class="job-title">Système de surveillance réseau</div>
+            <p>Développement d'un système de monitoring pour surveiller les performances et détecter les anomalies sur un réseau, avec notifications en temps réel et tableau de bord interactif.</p>
+        </div>
+        <div class="job">
+            <div class="job-title">Déploiement d'une solution VoIP</div>
+            <p>Installation et configuration d'un système de téléphonie IP basé sur Asterisk, incluant la mise en place d'un standard automatique et l'intégration avec l'infrastructure existante.</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>CERTIFICATIONS</h2>
+        <div class="certification">
+            <div class="job-title">CCNA</div>
+            <div class="company">Cisco Certified Network Associate</div>
+        </div>
+        <div class="certification">
+            <div class="job-title">Stormshield Network Security</div>
+            <div class="company">Stormshield Certified Administrator</div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>CENTRES D'INTÉRÊT</h2>
+        <div class="skills-list">
+            <span class="skill">Musique</span>
+            <span class="skill">Nouvelles technologies</span>
+            <span class="skill">Deadpool</span>
+        </div>
+    </div>
+    
+    <div class="section">
+        <p style="text-align: center; font-style: italic; color: #666;">
+            Ce CV a été généré depuis le portfolio en ligne de Mathis Torres
+        </p>
+        <div class="logo" style="text-align: center;">MT</div>
+    </div>
+</body>
+</html>
