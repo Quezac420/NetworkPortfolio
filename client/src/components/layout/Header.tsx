@@ -4,8 +4,8 @@ import { useLocation } from "wouter";
 import { DeadpoolLogo } from "@/components/ui/deadpool-logo";
 import { Button } from "@/components/ui/button";
 
-// Header simplifié qui utilise le français par défaut
 export default function Header() {
+  // Version simplifiée - fr fixé
   const language = "fr";
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,15 +30,14 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { href: isHomePage ? "#home" : "/", label: language === "fr" ? "Accueil" : "Home" },
-    { href: isHomePage ? "#about" : "/#about", label: language === "fr" ? "À propos" : "About" },
-    { href: isHomePage ? "#skills" : "/#skills", label: language === "fr" ? "Compétences" : "Skills" },
-    { href: isHomePage ? "#projects" : "/#projects", label: language === "fr" ? "Projets" : "Projects" },
-    { href: isHomePage ? "#contact" : "/#contact", label: language === "fr" ? "Disponibilité" : "Availability" }
+    { href: isHomePage ? "#home" : "/", label: "Accueil" },
+    { href: isHomePage ? "#about" : "/#about", label: "À propos" },
+    { href: isHomePage ? "#skills" : "/#skills", label: "Compétences" },
+    { href: isHomePage ? "#projects" : "/#projects", label: "Projets" },
+    { href: isHomePage ? "#contact" : "/#contact", label: "Disponibilité" }
   ];
 
-  // Simple CV download button
-  const downloadCV = () => {
+  const openCV = () => {
     window.open('/cv.html', '_blank');
   };
 
@@ -68,14 +67,41 @@ export default function Header() {
             </ul>
             
             <div className="flex items-center space-x-3">
-              <LanguageButton />
-              <DownloadCV />
+              {/* Bouton FR/EN désactivé pour l'instant */}
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="flex items-center gap-2 border-red-500 text-red-600 hover:bg-red-50"
+              >
+                <Globe className="h-4 w-4" />
+                <span className="w-6 text-center">FR</span>
+              </Button>
+              
+              {/* Bouton télécharger CV */}
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="flex items-center gap-2 border-red-500 text-red-600 hover:bg-red-50"
+                onClick={openCV}
+              >
+                <Download className="h-4 w-4" />
+                <span>CV</span>
+              </Button>
             </div>
           </nav>
           
           {/* Mobile Navigation Toggle */}
           <div className="md:hidden flex items-center space-x-3">
-            <LanguageButton />
+            {/* Bouton FR/EN désactivé pour l'instant - version mobile */}
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="flex items-center gap-2 border-red-500 text-red-600 hover:bg-red-50"
+            >
+              <Globe className="h-4 w-4" />
+              <span className="w-6 text-center">FR</span>
+            </Button>
+            
             <button 
               className="focus:outline-none" 
               onClick={toggleMobileMenu} 
@@ -101,7 +127,16 @@ export default function Header() {
               </li>
             ))}
             <li className="py-2 px-4">
-              <DownloadCV />
+              {/* Bouton télécharger CV - version mobile */}
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="flex items-center gap-2 border-red-500 text-red-600 hover:bg-red-50"
+                onClick={openCV}
+              >
+                <Download className="h-4 w-4" />
+                <span>CV</span>
+              </Button>
             </li>
           </ul>
         </div>
