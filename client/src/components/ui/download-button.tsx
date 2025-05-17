@@ -6,10 +6,8 @@ import { LanguageContext } from "@/App";
 export function DownloadButton() {
   const { language } = useContext(LanguageContext);
   
-  // Cette fonction génère un PDF du portfolio
-  // Pour l'instant, elle utilise window.print() comme solution simple
   const handleDownload = () => {
-    window.print();
+    window.open('/cv.html', '_blank');
   };
   
   return (
@@ -20,7 +18,7 @@ export function DownloadButton() {
       onClick={handleDownload}
     >
       <Download className="h-4 w-4" />
-      <span>{language === "fr" ? "Télécharger" : "Download"}</span>
+      <span>{language === "fr" ? "CV" : "Resume"}</span>
     </Button>
   );
 }
