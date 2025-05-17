@@ -5,12 +5,12 @@ import { Toaster } from "@/components/ui/toaster";
 import Home from "@/pages/Home";
 import ProjectDetail from "@/pages/ProjectDetail";
 import NotFound from "@/pages/not-found";
-import { useState, createContext } from "react";
+import { useState, createContext, useCallback } from "react";
 
 // Create a context for language
 export const LanguageContext = createContext({
   language: 'fr' as 'fr' | 'en',
-  setLanguage: (lang: 'fr' | 'en') => {}
+  toggleLanguage: () => {}
 });
 
 function Router() {
@@ -27,9 +27,14 @@ function App() {
   // Add language state to the app
   const [language, setLanguage] = useState<'fr' | 'en'>('fr');
   
+  // Create a toggle function that switches the language
+  const toggleLanguage = useCallback(() => {
+    setLanguage(prev => prev === 'fr' ? 'en' : 'fr');
+  }, []);
+  
   return (
     <QueryClientProvider client={queryClient}>
-      <LanguageContext.Provider value={{ language, setLanguage }}>
+      <LanguageContext.Provider value={{ language, toggleLanguage }}>
         <Router />
         <Toaster />
       </LanguageContext.Provider>
