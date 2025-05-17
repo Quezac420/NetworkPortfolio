@@ -63,12 +63,13 @@ export function ProjectCard({ title, description, imageUrl, tags, link, index, i
               </Badge>
             ))}
           </div>
-          <Link href={`/project/${id}`}>
-            <a className="text-red-600 hover:text-red-800 font-bold inline-flex items-center transition-colors">
-              {language === 'fr' ? 'Voir les détails' : 'View details'}
-              <ChevronRight className="h-4 w-4 ml-1" />
-            </a>
-          </Link>
+          <a 
+            href={`/project/${id}`} 
+            className="text-red-600 hover:text-red-800 font-bold inline-flex items-center transition-colors"
+          >
+            {language === 'fr' ? 'Voir les détails' : 'View details'}
+            <ChevronRight className="h-4 w-4 ml-1" />
+          </a>
         </CardContent>
       </Card>
     </motion.div>
