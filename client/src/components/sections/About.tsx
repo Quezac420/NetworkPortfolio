@@ -72,10 +72,49 @@ export default function About() {
             </p>
             <div className="flex flex-col md:flex-row gap-4 pl-0">
               <div className="flex-1">
-                <MusicPassion />
+                {/* Remplace la carte MusicPassion par une version simplifiée */}
+                <div 
+                  className="relative p-6 rounded-lg bg-gradient-to-br from-red-50 to-white border border-red-100 overflow-hidden group"
+                >
+                  <div className="flex items-center mb-3">
+                    <div className="p-2 rounded-full bg-red-100">
+                      <Music className="h-5 w-5 text-red-600" />
+                    </div>
+                    <h3 className="ml-3 font-bold text-lg text-red-600">Passionné de Musique</h3>
+                  </div>
+                  
+                  <p className="text-gray-700">
+                    J'adore jouer et composer dans mon temps libre, la musique est une source d'inspiration constante.
+                  </p>
+                  
+                  <div className="absolute top-8 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex space-x-1">
+                      <div className="text-2xl text-red-600">♪</div>
+                      <div className="text-2xl text-red-600">♫</div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="flex-1">
-                <DeadpoolPassion />
+                {/* Remplace la carte DeadpoolPassion par une version simplifiée */}
+                <div 
+                  className="relative p-6 rounded-lg bg-gradient-to-br from-red-50 to-white border border-red-100 overflow-hidden group"
+                >
+                  <div className="flex items-center mb-3">
+                    <div className="p-2 rounded-full bg-red-100">
+                      <DeadpoolLogo className="h-5 w-5" />
+                    </div>
+                    <h3 className="ml-3 font-bold text-lg text-red-600">Fan de Deadpool</h3>
+                  </div>
+                  
+                  <p className="text-gray-700">
+                    L'humour et la résilience de ce personnage m'inspirent au quotidien et se reflètent dans mon approche de résolution de problèmes.
+                  </p>
+                  
+                  <div className="absolute right-0 bottom-0 opacity-0 group-hover:opacity-50 transition-opacity duration-300">
+                    <DeadpoolLogo className="h-24 w-24" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
