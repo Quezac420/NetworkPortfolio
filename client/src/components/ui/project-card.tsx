@@ -3,6 +3,9 @@ import { ChevronRight, Server, Shield } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { DeadpoolLogo } from "./deadpool-logo";
+import { Link } from "wouter";
+import { useContext } from "react";
+import { LanguageContext } from "@/App";
 
 interface ProjectCardProps {
   title: string;
@@ -11,9 +14,12 @@ interface ProjectCardProps {
   tags: string[];
   link?: string;
   index: number;
+  id: string;
 }
 
-export function ProjectCard({ title, description, imageUrl, tags, link = "#", index }: ProjectCardProps) {
+export function ProjectCard({ title, description, imageUrl, tags, link, index, id }: ProjectCardProps) {
+  const { language } = useContext(LanguageContext);
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -57,10 +63,12 @@ export function ProjectCard({ title, description, imageUrl, tags, link = "#", in
               </Badge>
             ))}
           </div>
-          <a href={link} className="text-red-600 hover:text-red-800 font-bold inline-flex items-center transition-colors">
-            Voir les détails
-            <ChevronRight className="h-4 w-4 ml-1" />
-          </a>
+          <Link href={`/project/${id}`}>
+            <a className="text-red-600 hover:text-red-800 font-bold inline-flex items-center transition-colors">
+              {language === 'fr' ? 'Voir les détails' : 'View details'}
+              <ChevronRight className="h-4 w-4 ml-1" />
+            </a>
+          </Link>
         </CardContent>
       </Card>
     </motion.div>
