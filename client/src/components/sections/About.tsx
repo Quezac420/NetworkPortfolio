@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CalendarDays, GraduationCap, Network, Shield } from "lucide-react";
+import { CalendarDays, GraduationCap, Network, Shield, Music } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { DeadpoolLogo } from "@/components/ui/deadpool-logo";
 import { MusicPassion } from "@/components/ui/music-passion";
@@ -78,7 +78,7 @@ export default function About() {
                 >
                   <div className="flex items-center mb-3">
                     <div className="p-2 rounded-full bg-red-100">
-                      <Music className="h-5 w-5 text-red-600" />
+                      <span className="text-xl text-red-600">♫</span>
                     </div>
                     <h3 className="ml-3 font-bold text-lg text-red-600">Passionné de Musique</h3>
                   </div>
