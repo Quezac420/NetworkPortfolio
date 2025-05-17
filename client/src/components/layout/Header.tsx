@@ -42,12 +42,10 @@ export default function Header() {
     <header className={`fixed w-full bg-white ${isScrolled ? "bg-opacity-95 shadow-sm" : "bg-opacity-95"} z-50 transition-all duration-300`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link href="/">
-            <a className="flex items-center space-x-2">
-              <DeadpoolLogo className="h-8 w-8" />
-              <span className="text-xl font-bold text-red-600">Mathis Torres</span>
-            </a>
-          </Link>
+          <a href="/" className="flex items-center space-x-2">
+            <DeadpoolLogo className="h-8 w-8" />
+            <span className="text-xl font-bold text-red-600">Mathis Torres</span>
+          </a>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
