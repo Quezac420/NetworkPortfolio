@@ -1,15 +1,18 @@
-import { useState, useEffect, useContext } from "react";
-import { Menu } from "lucide-react";
-import { Link, useLocation } from "wouter";
+import { useState, useEffect } from "react";
+import { Menu, Globe, Download } from "lucide-react";
+import { useLocation } from "wouter";
 import { DeadpoolLogo } from "@/components/ui/deadpool-logo";
-import { LanguageSwitcher } from "@/components/ui/language-switcher";
-import { DownloadButton } from "@/components/ui/download-button";
-import { LanguageContext } from "@/App";
+import { Button } from "@/components/ui/button";
+import { LanguageType } from "@/pages/Home";
 
-export default function Header() {
+interface HeaderProps {
+  language: LanguageType;
+  toggleLanguage: () => void;
+}
+
+export default function Header({ language, toggleLanguage }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { language } = useContext(LanguageContext);
   const [location] = useLocation();
   const isHomePage = location === "/";
 
@@ -35,8 +38,34 @@ export default function Header() {
     { href: isHomePage ? "#about" : "/#about", label: language === "fr" ? "À propos" : "About" },
     { href: isHomePage ? "#skills" : "/#skills", label: language === "fr" ? "Compétences" : "Skills" },
     { href: isHomePage ? "#projects" : "/#projects", label: language === "fr" ? "Projets" : "Projects" },
-    { href: isHomePage ? "#contact" : "/#contact", label: language === "fr" ? "Contact" : "Contact" }
+    { href: isHomePage ? "#contact" : "/#contact", label: language === "fr" ? "Disponibilité" : "Availability" }
   ];
+
+  // Simple language switcher
+  const LanguageButton = () => (
+    <Button 
+      variant="outline" 
+      size="sm" 
+      className="flex items-center gap-2 border-red-500 text-red-600 hover:bg-red-50"
+      onClick={toggleLanguage}
+    >
+      <Globe className="h-4 w-4" />
+      <span className="w-6 text-center">{language === "fr" ? "FR" : "EN"}</span>
+    </Button>
+  );
+
+  // Simple CV download button
+  const DownloadCV = () => (
+    <Button 
+      variant="outline" 
+      size="sm" 
+      className="flex items-center gap-2 border-red-500 text-red-600 hover:bg-red-50"
+      onClick={() => window.open('/cv.html', '_blank')}
+    >
+      <Download className="h-4 w-4" />
+      <span>{language === "fr" ? "CV" : "Resume"}</span>
+    </Button>
+  );
 
   return (
     <header className={`fixed w-full bg-white ${isScrolled ? "bg-opacity-95 shadow-sm" : "bg-opacity-95"} z-50 transition-all duration-300`}>
@@ -64,14 +93,14 @@ export default function Header() {
             </ul>
             
             <div className="flex items-center space-x-3">
-              <LanguageSwitcher />
-              <DownloadButton />
+              <LanguageButton />
+              <DownloadCV />
             </div>
           </nav>
           
           {/* Mobile Navigation Toggle */}
           <div className="md:hidden flex items-center space-x-3">
-            <LanguageSwitcher />
+            <LanguageButton />
             <button 
               className="focus:outline-none" 
               onClick={toggleMobileMenu} 
@@ -97,7 +126,7 @@ export default function Header() {
               </li>
             ))}
             <li className="py-2 px-4">
-              <DownloadButton />
+              <DownloadCV />
             </li>
           </ul>
         </div>
