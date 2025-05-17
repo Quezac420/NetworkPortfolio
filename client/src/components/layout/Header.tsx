@@ -1,16 +1,12 @@
 import { useState, useEffect } from "react";
-import { Menu, Globe, Download } from "lucide-react";
+import { Menu, Download, Globe } from "lucide-react";
 import { useLocation } from "wouter";
 import { DeadpoolLogo } from "@/components/ui/deadpool-logo";
 import { Button } from "@/components/ui/button";
-import { LanguageType } from "@/pages/Home";
 
-interface HeaderProps {
-  language: LanguageType;
-  toggleLanguage: () => void;
-}
-
-export default function Header({ language, toggleLanguage }: HeaderProps) {
+// Header simplifié qui utilise le français par défaut
+export default function Header() {
+  const language = "fr";
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [location] = useLocation();
@@ -41,31 +37,10 @@ export default function Header({ language, toggleLanguage }: HeaderProps) {
     { href: isHomePage ? "#contact" : "/#contact", label: language === "fr" ? "Disponibilité" : "Availability" }
   ];
 
-  // Simple language switcher
-  const LanguageButton = () => (
-    <Button 
-      variant="outline" 
-      size="sm" 
-      className="flex items-center gap-2 border-red-500 text-red-600 hover:bg-red-50"
-      onClick={toggleLanguage}
-    >
-      <Globe className="h-4 w-4" />
-      <span className="w-6 text-center">{language === "fr" ? "FR" : "EN"}</span>
-    </Button>
-  );
-
   // Simple CV download button
-  const DownloadCV = () => (
-    <Button 
-      variant="outline" 
-      size="sm" 
-      className="flex items-center gap-2 border-red-500 text-red-600 hover:bg-red-50"
-      onClick={() => window.open('/cv.html', '_blank')}
-    >
-      <Download className="h-4 w-4" />
-      <span>{language === "fr" ? "CV" : "Resume"}</span>
-    </Button>
-  );
+  const downloadCV = () => {
+    window.open('/cv.html', '_blank');
+  };
 
   return (
     <header className={`fixed w-full bg-white ${isScrolled ? "bg-opacity-95 shadow-sm" : "bg-opacity-95"} z-50 transition-all duration-300`}>
