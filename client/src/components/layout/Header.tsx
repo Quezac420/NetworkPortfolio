@@ -32,8 +32,8 @@ export default function Header() {
             <a href="/#projects" className="text-gray-600 hover:text-red-600">
               {language === "fr" ? "Projets" : "Projects"}
             </a>
-            <a href="/#contact" className="text-gray-600 hover:text-red-600">
-              {language === "fr" ? "Contact" : "Contact"}
+            <a href="/#disponibilite" className="text-gray-600 hover:text-red-600">
+              {language === "fr" ? "Disponibilité" : "Availability"}
             </a>
           </div>
 
