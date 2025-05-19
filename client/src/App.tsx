@@ -7,11 +7,18 @@ import ProjectDetail from "@/pages/ProjectDetail";
 import NotFound from "@/pages/not-found";
 import { useState, createContext, useCallback } from "react";
 
-// Create a context for language
-export const LanguageContext = createContext({
-  language: 'fr' as 'fr' | 'en',
+type Language = 'fr' | 'en';
+
+interface LanguageContextType {
+  language: Language;
+  toggleLanguage: () => void;
+  setLanguage: (lang: Language) => void;
+}
+
+export const LanguageContext = createContext<LanguageContextType>({
+  language: 'fr',
   toggleLanguage: () => {},
-  setLanguage: (lang: 'fr' | 'en') => {}
+  setLanguage: () => {}
 });
 
 function Router() {

@@ -8,6 +8,10 @@ import { LanguageContext } from "@/App";
 export default function Header() {
   const { language, toggleLanguage } = useContext(LanguageContext);
 
+  const handleLanguageToggle = () => {
+    toggleLanguage();
+  };
+
   const openCV = () => {
     window.open('/cv.html', '_blank');
   };
@@ -38,7 +42,7 @@ export default function Header() {
               variant="outline" 
               size="sm" 
               className="flex items-center gap-2 border-red-500 text-red-600 hover:bg-red-50"
-              onClick={toggleLanguage}
+              onClick={handleLanguageToggle}
             >
               <Globe className="h-4 w-4" />
               <span className="w-6 text-center">{language === "fr" ? "EN" : "FR"}</span>
