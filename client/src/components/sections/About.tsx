@@ -40,7 +40,7 @@ export default function About() {
                 communication infrastructures.</>
               )}
             </p>
-            <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-600">
+            <div className="bg-red-50 dark:bg-gray-900 p-4 rounded-lg border-l-4 border-red-600">
               <div className="flex items-center mb-2">
                 <Network className="h-5 w-5 text-red-600 mr-2" />
                 <strong className="text-red-700">
