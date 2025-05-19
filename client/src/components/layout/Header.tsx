@@ -17,7 +17,7 @@ export default function Header() {
     <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <nav className="flex justify-between items-center h-16">
-          <div className="text-xl font-bold text-red-600">Portfolio Mathis</div>
+          <a href="/#" className="text-xl font-bold text-red-600 hover:text-red-700">Portfolio Mathis</a>
 
           <div className="hidden md:flex items-center space-x-6">
             <a href="/#about" className="text-gray-600 hover:text-red-600">
