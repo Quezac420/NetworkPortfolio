@@ -25,7 +25,7 @@ export default function Hero() {
             <h2 className="text-2xl md:text-3xl font-semibold mb-4 leading-tight text-[#1F2937]">
               Étudiant en <span className="text-red-600">Réseaux</span> et <span className="text-red-600">Télécommunications</span>
             </h2>
-            <p className="text-lg text-gray-600 mb-6">
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
               Passionné par les technologies de réseau et les solutions de communication modernes.
               Je développe mes compétences techniques pour construire l'infrastructure numérique de demain.
             </p>
