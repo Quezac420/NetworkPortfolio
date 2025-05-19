@@ -2,7 +2,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Globe, Download } from "lucide-react";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { LanguageContext } from "@/App";
 
 export default function Header() {
