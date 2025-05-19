@@ -15,7 +15,7 @@ export function LanguageButton() {
       onClick={toggleLanguage}
     >
       <Globe className="h-4 w-4" />
-      <span className="w-6 text-center">{language === "fr" ? "EN" : "FR"}</span>
+      <span className="w-6 text-center">{language === "fr" ? "FR" : "EN"}</span>
     </Button>
   );
 }
