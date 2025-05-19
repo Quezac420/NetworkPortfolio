@@ -1,6 +1,7 @@
+
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Download, Globe } from "lucide-react";
+import { Globe, Download } from "lucide-react";
 import { useContext } from "react";
 import { LanguageContext } from "@/App";
 
@@ -15,31 +16,21 @@ export default function Header() {
     <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <nav className="flex justify-between items-center h-16">
-          <Link href="/">
-            <a className="text-xl font-bold text-red-600">MT</a>
-          </Link>
+          <div className="text-xl font-bold text-red-600">Portfolio Mathis</div>
 
           <div className="hidden md:flex items-center space-x-6">
-            <Link href="/#about">
-              <a className="text-gray-600 hover:text-red-600">
-                {language === "fr" ? "À propos" : "About"}
-              </a>
-            </Link>
-            <Link href="/#skills">
-              <a className="text-gray-600 hover:text-red-600">
-                {language === "fr" ? "Compétences" : "Skills"}
-              </a>
-            </Link>
-            <Link href="/#projects">
-              <a className="text-gray-600 hover:text-red-600">
-                {language === "fr" ? "Projets" : "Projects"}
-              </a>
-            </Link>
-            <Link href="/#contact">
-              <a className="text-gray-600 hover:text-red-600">
-                {language === "fr" ? "Contact" : "Contact"}
-              </a>
-            </Link>
+            <a href="/#about" className="text-gray-600 hover:text-red-600">
+              {language === "fr" ? "À propos" : "About"}
+            </a>
+            <a href="/#skills" className="text-gray-600 hover:text-red-600">
+              {language === "fr" ? "Compétences" : "Skills"}
+            </a>
+            <a href="/#projects" className="text-gray-600 hover:text-red-600">
+              {language === "fr" ? "Projets" : "Projects"}
+            </a>
+            <a href="/#contact" className="text-gray-600 hover:text-red-600">
+              {language === "fr" ? "Contact" : "Contact"}
+            </a>
           </div>
 
           <div className="flex items-center space-x-3">
@@ -50,7 +41,7 @@ export default function Header() {
               onClick={toggleLanguage}
             >
               <Globe className="h-4 w-4" />
-              <span className="w-6 text-center">{language === "fr" ? "FR" : "EN"}</span>
+              <span className="w-6 text-center">{language === "fr" ? "EN" : "FR"}</span>
             </Button>
 
             <Button 
