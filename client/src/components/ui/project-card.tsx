@@ -19,7 +19,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ title, description, imageUrl, tags, link, index, id }: ProjectCardProps) {
   const { language } = useContext(LanguageContext);
-  
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ export function ProjectCard({ title, description, imageUrl, tags, link, index, i
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <Card className="overflow-hidden shadow-md border-2 border-red-500 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative">
+      <Card className="overflow-hidden shadow-md border-2 border-red-500 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative dark:bg-gray-800 dark:border-gray-700">
         <div className="absolute top-0 right-0 p-2 z-10">
           <DeadpoolLogo className="h-8 w-8 opacity-75" />
         </div>
