@@ -7,7 +7,8 @@ export default function Contact() {
   const { language } = useContext(LanguageContext);
 
   return (
-    <section id="disponibilite" className="py-16 bg-white">
+    <section id="disponibilite" className="py-16 bg-white dark:bg-gray-800 relative">
+      <div className="h-1 bg-red-600 absolute top-0 left-0 w-full" />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

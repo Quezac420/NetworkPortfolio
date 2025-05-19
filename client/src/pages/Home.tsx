@@ -13,9 +13,11 @@ export default function Home() {
   const { language } = useContext(LanguageContext);
   
   return (
-    <div className="min-h-screen w-full bg-background text-foreground transition-colors duration-200">
+    <div className="min-h-screen w-full bg-background dark:bg-gray-900 text-foreground transition-colors duration-200">
       <Header />
+      <div className="h-1 bg-red-600" />
       <Hero />
+      <div className="h-1 bg-red-600" />
       <About />
       <Skills />
       <Projects />

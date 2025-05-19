@@ -8,8 +8,10 @@ export default function Projects() {
   const projectsData = language === 'fr' ? projects : projectsEN;
   
   return (
-    <section id="projects" className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-16 bg-gray-50 dark:bg-gray-900">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="h-1 bg-red-600 absolute top-0 left-0 w-full" />
+        <div className="h-1 bg-red-600 absolute bottom-0 left-0 w-full" />
         <h2 className="text-3xl font-bold mb-12 text-center">
           {language === 'fr' ? 'Mes projets' : 'My projects'}
         </h2>
