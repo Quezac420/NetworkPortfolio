@@ -38,8 +38,10 @@ function App() {
   
   // Create a toggle function that switches the language
   const toggleLanguage = useCallback(() => {
-    setLanguage(prev => prev === 'fr' ? 'en' : 'fr');
-  }, []);
+    const newLang = language === 'fr' ? 'en' : 'fr';
+    setLanguage(newLang);
+    handleSetLanguage(newLang);
+  }, [language]);
 
   const handleSetLanguage = useCallback((lang: 'fr' | 'en') => {
     setLanguage(lang);
