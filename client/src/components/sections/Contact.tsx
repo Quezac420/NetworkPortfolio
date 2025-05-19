@@ -18,7 +18,7 @@ export default function Contact() {
           <h2 className="text-3xl font-bold mb-12 text-center">
             {language === "fr" ? "Disponibilité" : "Availability"}
           </h2>
-          
+
           <div className="max-w-3xl mx-auto">
             <Card className="shadow-lg border-red-100">
               <CardContent className="pt-6 p-8">
@@ -30,7 +30,7 @@ export default function Contact() {
                     ? "Je suis actuellement à la recherche d'une alternance en réseaux et télécommunications. N'hésitez pas à me contacter pour discuter de toute opportunité professionnelle qui me permettrait de développer mes compétences tout en poursuivant ma formation."
                     : "I am currently looking for an internship in networks and telecommunications. Feel free to contact me to discuss any professional opportunity that would allow me to develop my skills while continuing my education."}
                 </p>
-                
+
                 <div className="mt-6 bg-red-50 p-4 rounded-lg border border-red-100">
                   <p className="text-red-700 italic">
                     {language === "fr" 
