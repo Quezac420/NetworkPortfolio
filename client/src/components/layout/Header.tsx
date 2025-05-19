@@ -2,8 +2,8 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Globe, Download } from "lucide-react";
-import React, { useContext } from "react";
-import { LanguageContext } from "@/App";
+import React from "react";
+import { LanguageSwitcher } from "@/components/ui/language-switcher";
 
 export default function Header() {
   const { language, toggleLanguage } = useContext(LanguageContext);
@@ -34,15 +34,7 @@ export default function Header() {
           </div>
 
           <div className="flex items-center space-x-3">
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="flex items-center gap-2 border-red-500 text-red-600 hover:bg-red-50"
-              onClick={toggleLanguage}
-            >
-              <Globe className="h-4 w-4" />
-              <span className="w-6 text-center">{language === "fr" ? "EN" : "FR"}</span>
-            </Button>
+            <LanguageSwitcher />
 
             <Button 
               variant="outline" 
