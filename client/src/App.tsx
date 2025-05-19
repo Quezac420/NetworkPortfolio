@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Home from "@/pages/Home";
 import ProjectDetail from "@/pages/ProjectDetail";
 import NotFound from "@/pages/not-found";
-import { useState, createContext, useCallback } from "react";
+import React, { useState, createContext, useCallback } from "react";
 
 type Language = 'fr' | 'en';
 
