@@ -11,7 +11,7 @@ export function SkillBar({ name, percentage, color = "bg-red-600" }: SkillBarPro
   return (
     <div className="mb-8">
       <div className="flex justify-between items-center mb-2">
-        <span className="font-bold text-gray-800 dark:text-gray-200">{name}</span>
+        <span className="font-bold text-gray-800">{name}</span>
         <div className="flex items-center">
           <span className="font-semibold text-red-600 mr-1">{percentage}</span>
           <span className="text-sm text-gray-600">%</span>
