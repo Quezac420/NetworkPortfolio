@@ -10,7 +10,8 @@ import { useState, createContext, useCallback } from "react";
 // Create a context for language
 export const LanguageContext = createContext({
   language: 'fr' as 'fr' | 'en',
-  toggleLanguage: () => {}
+  toggleLanguage: () => {},
+  setLanguage: (lang: 'fr' | 'en') => {}
 });
 
 function Router() {
@@ -31,10 +32,14 @@ function App() {
   const toggleLanguage = useCallback(() => {
     setLanguage(prev => prev === 'fr' ? 'en' : 'fr');
   }, []);
+
+  const handleSetLanguage = useCallback((lang: 'fr' | 'en') => {
+    setLanguage(lang);
+  }, []);
   
   return (
     <QueryClientProvider client={queryClient}>
-      <LanguageContext.Provider value={{ language, toggleLanguage }}>
+      <LanguageContext.Provider value={{ language, toggleLanguage, setLanguage: handleSetLanguage }}>
         <Router />
         <Toaster />
       </LanguageContext.Provider>
