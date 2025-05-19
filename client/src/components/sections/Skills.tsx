@@ -26,7 +26,7 @@ export default function Skills() {
             <div className="absolute -top-3 -right-3 bg-red-600 rounded-full p-1.5">
               <Server className="h-5 w-5 text-white" />
             </div>
-            <p className="text-center text-gray-700">
+            <p className="text-center text-gray-700 dark:text-gray-200">
               Spécialiste en <span className="font-bold text-red-600">administration système et réseau</span>, je maîtrise les technologies clés pour construire et maintenir des infrastructures IT robustes et sécurisées. Mes compétences techniques reflètent ma passion pour l'excellence opérationnelle.
             </p>
           </div>

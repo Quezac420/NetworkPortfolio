@@ -22,7 +22,7 @@ export default function Hero() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight bg-gradient-to-r from-red-600 to-red-800 text-transparent bg-clip-text">
               Mathis Torres
             </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold mb-4 leading-tight text-[#1F2937]">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4 leading-tight text-gray-900 dark:text-gray-100">
               Étudiant en <span className="text-red-600">Réseaux</span> et <span className="text-red-600">Télécommunications</span>
             </h2>
             <p className="text-lg text-gray-600 mb-6">
