@@ -5,6 +5,7 @@ import { Globe, Download } from "lucide-react";
 import React, { useContext } from "react";
 import { LanguageContext } from "@/App";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export default function Header() {
   const { language, toggleLanguage } = useContext(LanguageContext);
