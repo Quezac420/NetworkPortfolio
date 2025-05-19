@@ -7,7 +7,7 @@ import { DeadpoolLogo } from "@/components/ui/deadpool-logo";
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-16 bg-gradient-to-b from-red-50 to-red-100 relative">
+    <section id="skills" className="py-16 bg-gradient-to-b from-background to-muted relative">
       <div className="absolute top-0 left-0 w-full h-2 bg-red-600"></div>
       <div className="absolute bottom-0 left-0 w-full h-2 bg-red-600"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
