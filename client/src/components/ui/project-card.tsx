@@ -53,7 +53,7 @@ export function ProjectCard({ title, description, imageUrl, tags, link, index, i
         </div>
         <CardContent className="p-6">
           <h3 className="font-bold text-xl mb-2 text-red-600">{title}</h3>
-          <p className="text-gray-600 mb-4">
+          <p className="text-gray-600 dark:text-gray-300 mb-4">
             {description}
           </p>
           <div className="flex flex-wrap gap-2 mb-4">

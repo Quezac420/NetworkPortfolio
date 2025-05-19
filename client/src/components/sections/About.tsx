@@ -9,7 +9,7 @@ import { LanguageContext } from "@/App";
 
 export default function About() {
   const { language } = useContext(LanguageContext);
-  
+
   return (
     <section id="about" className="py-16 bg-white dark:bg-gray-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,10 +26,10 @@ export default function About() {
             </h2>
             <DeadpoolLogo className="h-8 w-8 ml-3" />
           </div>
-          
+
           <div className="space-y-6 text-gray-700 relative">
             <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-red-500 to-red-700"></div>
-            <p className="pl-4">
+            <p className="pl-4 text-gray-700 dark:text-gray-300">
               {language === 'fr' ? (
                 <>Je suis actuellement en <strong className="text-red-600">deuxième année de BUT Réseaux et Télécommunications</strong>, où j'acquiers 
                 des compétences techniques solides dans la conception, l'installation et la maintenance des 
@@ -61,7 +61,7 @@ export default function About() {
                 )}
               </p>
             </div>
-            <p className="pl-4">
+            <p className="pl-4 text-gray-700 dark:text-gray-300">
               {language === 'fr' ? (
                 <>En dehors de mes études, je développe mes compétences en programmation et en automatisation
                 des infrastructures.</>
@@ -82,11 +82,11 @@ export default function About() {
                     </div>
                     <h3 className="ml-3 font-bold text-lg text-red-600">Passionné de Musique</h3>
                   </div>
-                  
+
                   <p className="text-gray-700">
                     J'adore jouer et composer dans mon temps libre, la musique est une source d'inspiration constante.
                   </p>
-                  
+
                   <div className="absolute top-8 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="flex space-x-1">
                       <div className="text-2xl text-red-600">♪</div>
@@ -106,11 +106,11 @@ export default function About() {
                     </div>
                     <h3 className="ml-3 font-bold text-lg text-red-600">Fan de Deadpool</h3>
                   </div>
-                  
+
                   <p className="text-gray-700">
                     L'humour et la résilience de ce personnage m'inspirent au quotidien et se reflètent dans mon approche de résolution de problèmes.
                   </p>
-                  
+
                   <div className="absolute right-0 bottom-0 opacity-0 group-hover:opacity-50 transition-opacity duration-300">
                     <DeadpoolLogo className="h-24 w-24" />
                   </div>
@@ -118,7 +118,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          
+
           <Card className="mt-12 border-2 border-red-500 shadow-md">
             <CardContent className="p-6">
               <div className="flex items-center mb-4">

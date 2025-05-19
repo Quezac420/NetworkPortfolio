@@ -6,10 +6,10 @@ import { DeadpoolLogo } from "./deadpool-logo";
 // Composant simplifié pour la passion musique
 export function MusicCard() {
   const [isHovered, setIsHovered] = useState(false);
-  
+
   return (
     <div 
-      className="relative p-6 rounded-lg bg-gradient-to-br from-red-50 to-white border border-red-100 overflow-hidden"
+      className="relative p-6 rounded-lg bg-gradient-to-br from-red-50 to-white dark:from-red-900/20 dark:to-gray-800 border border-red-100 dark:border-red-700 overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -19,11 +19,11 @@ export function MusicCard() {
         </div>
         <h3 className="ml-3 font-bold text-lg text-red-600">Passionné de Musique</h3>
       </div>
-      
+
       <p className="text-gray-700">
         J'adore jouer et composer dans mon temps libre, la musique est une source d'inspiration constante.
       </p>
-      
+
       {isHovered && (
         <motion.div 
           className="absolute top-8 right-4"
@@ -44,10 +44,10 @@ export function MusicCard() {
 // Composant simplifié pour la passion Deadpool
 export function DeadpoolCard() {
   const [isHovered, setIsHovered] = useState(false);
-  
+
   return (
     <div 
-      className="relative p-6 rounded-lg bg-gradient-to-br from-red-50 to-white border border-red-100 overflow-hidden"
+      className="relative p-6 rounded-lg bg-gradient-to-br from-red-50 to-white dark:from-red-900/20 dark:to-gray-800 border border-red-100 dark:border-red-700 overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -57,11 +57,11 @@ export function DeadpoolCard() {
         </div>
         <h3 className="ml-3 font-bold text-lg text-red-600">Fan de Deadpool</h3>
       </div>
-      
+
       <p className="text-gray-700">
         L'humour et la résilience de ce personnage m'inspirent au quotidien et se reflètent dans mon approche de résolution de problèmes.
       </p>
-      
+
       {isHovered && (
         <motion.div 
           className="absolute right-0 bottom-0"

@@ -30,17 +30,17 @@ export default function Hero() {
               Je développe mes compétences techniques pour construire l'infrastructure numérique de demain.
             </p>
             <div className="flex flex-wrap gap-3 mb-6">
-              <div className="flex items-center bg-red-50 rounded-full px-3 py-1 border border-red-200">
+              <div className="flex items-center bg-red-50 dark:bg-red-900/20 rounded-full px-3 py-1 border border-red-200 dark:border-red-700">
                 <Server className="h-4 w-4 text-red-600 mr-2" />
-                <span className="text-sm font-medium">Admin Réseau</span>
+                <span className="text-sm font-medium text-gray-800 dark:text-gray-200">Admin Réseau</span>
               </div>
-              <div className="flex items-center bg-red-50 rounded-full px-3 py-1 border border-red-200">
+              <div className="flex items-center bg-red-50 dark:bg-red-900/20 rounded-full px-3 py-1 border border-red-200 dark:border-red-700">
                 <Shield className="h-4 w-4 text-red-600 mr-2" />
-                <span className="text-sm font-medium">Sécurité IT</span>
+                <span className="text-sm font-medium text-gray-800 dark:text-gray-200">Sécurité IT</span>
               </div>
-              <div className="flex items-center bg-red-50 rounded-full px-3 py-1 border border-red-200">
+              <div className="flex items-center bg-red-50 dark:bg-red-900/20 rounded-full px-3 py-1 border border-red-200 dark:border-red-700">
                 <Music className="h-4 w-4 text-red-600 mr-2" />
-                <span className="text-sm font-medium">Passionné de Musique</span>
+                <span className="text-sm font-medium text-gray-800 dark:text-gray-200">Passionné de Musique</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
