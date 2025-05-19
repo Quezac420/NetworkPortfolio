@@ -8,7 +8,7 @@ export default function Projects() {
   const projectsData = language === 'fr' ? projects : projectsEN;
   
   return (
-    <section id="projects" className="py-16 bg-white">
+    <section id="projects" className="py-16 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold mb-12 text-center">
           {language === 'fr' ? 'Mes projets' : 'My projects'}

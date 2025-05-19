@@ -11,7 +11,7 @@ export default function About() {
   const { language } = useContext(LanguageContext);
   
   return (
-    <section id="about" className="py-16 bg-white">
+    <section id="about" className="py-16 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="max-w-3xl mx-auto"
