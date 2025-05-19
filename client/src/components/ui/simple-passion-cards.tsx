@@ -9,7 +9,7 @@ export function MusicCard() {
 
   return (
     <div 
-      className="relative p-6 rounded-lg bg-gradient-to-br from-red-50 to-white dark:from-gray-900 dark:to-gray-950 border border-red-100 dark:border-red-700 overflow-hidden"
+      className="relative p-6 rounded-lg bg-gradient-to-br from-red-50 to-white dark:from-gray-800 dark:to-gray-900 border border-red-100 dark:border-red-700 overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -20,7 +20,7 @@ export function MusicCard() {
         <h3 className="ml-3 font-bold text-lg text-red-600">Passionné de Musique</h3>
       </div>
 
-      <p className="text-gray-700">
+      <p className="text-gray-700 dark:text-gray-300">
         J'adore jouer et composer dans mon temps libre, la musique est une source d'inspiration constante.
       </p>
 
@@ -47,7 +47,7 @@ export function DeadpoolCard() {
 
   return (
     <div 
-      className="relative p-6 rounded-lg bg-gradient-to-br from-red-50 to-white dark:from-gray-900 dark:to-gray-950 border border-red-100 dark:border-red-700 overflow-hidden"
+      className="relative p-6 rounded-lg bg-gradient-to-br from-red-50 to-white dark:from-gray-800 dark:to-gray-900 border border-red-100 dark:border-red-700 overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -58,7 +58,7 @@ export function DeadpoolCard() {
         <h3 className="ml-3 font-bold text-lg text-red-600">Fan de Deadpool</h3>
       </div>
 
-      <p className="text-gray-700">
+      <p className="text-gray-700 dark:text-gray-300">
         L'humour et la résilience de ce personnage m'inspirent au quotidien et se reflètent dans mon approche de résolution de problèmes.
       </p>
 
