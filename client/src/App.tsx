@@ -46,10 +46,12 @@ function App() {
   
   return (
     <QueryClientProvider client={queryClient}>
-      <LanguageContext.Provider value={{ language, toggleLanguage, setLanguage: handleSetLanguage }}>
+      <ThemeProvider>
+        <LanguageContext.Provider value={{ language, toggleLanguage, setLanguage: handleSetLanguage }}>
         <Router />
         <Toaster />
       </LanguageContext.Provider>
+      </ThemeProvider>
     </QueryClientProvider>
   );
 }

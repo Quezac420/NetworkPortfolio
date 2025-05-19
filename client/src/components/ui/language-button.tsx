@@ -1,3 +1,4 @@
+
 import { useContext } from "react";
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
@@ -14,7 +15,7 @@ export function LanguageButton() {
       onClick={toggleLanguage}
     >
       <Globe className="h-4 w-4" />
-      <span className="w-6 text-center">{language === "fr" ? "FR" : "EN"}</span>
+      <span className="w-6 text-center">{language === "fr" ? "EN" : "FR"}</span>
     </Button>
   );
 }
