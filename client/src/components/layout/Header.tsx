@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Menu, Download, Globe } from "lucide-react";
 import { useLocation } from "wouter";
 import { DeadpoolLogo } from "@/components/ui/deadpool-logo";
 import { Button } from "@/components/ui/button";
+import { LanguageContext } from "@/App";
 
 export default function Header() {
-  // Version simplifiée - fr fixé
-  const language = "fr";
+  const { language, toggleLanguage } = useContext(LanguageContext);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [location] = useLocation();
@@ -30,11 +30,11 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { href: isHomePage ? "#home" : "/", label: "Accueil" },
-    { href: isHomePage ? "#about" : "/#about", label: "À propos" },
-    { href: isHomePage ? "#skills" : "/#skills", label: "Compétences" },
-    { href: isHomePage ? "#projects" : "/#projects", label: "Projets" },
-    { href: isHomePage ? "#contact" : "/#contact", label: "Disponibilité" }
+    { href: isHomePage ? "#home" : "/", label: language === "fr" ? "Accueil" : "Home" },
+    { href: isHomePage ? "#about" : "/#about", label: language === "fr" ? "À propos" : "About" },
+    { href: isHomePage ? "#skills" : "/#skills", label: language === "fr" ? "Compétences" : "Skills" },
+    { href: isHomePage ? "#projects" : "/#projects", label: language === "fr" ? "Projets" : "Projects" },
+    { href: isHomePage ? "#contact" : "/#contact", label: language === "fr" ? "Disponibilité" : "Availability" }
   ];
 
   const openCV = () => {
@@ -49,7 +49,7 @@ export default function Header() {
             <DeadpoolLogo className="h-8 w-8" />
             <span className="text-xl font-bold text-red-600">Mathis Torres</span>
           </a>
-          
+
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <ul className="flex space-x-8">
@@ -65,18 +65,19 @@ export default function Header() {
                 </li>
               ))}
             </ul>
-            
+
             <div className="flex items-center space-x-3">
               {/* Bouton FR/EN désactivé pour l'instant */}
               <Button 
                 variant="outline" 
                 size="sm" 
                 className="flex items-center gap-2 border-red-500 text-red-600 hover:bg-red-50"
+                onClick={toggleLanguage}
               >
                 <Globe className="h-4 w-4" />
-                <span className="w-6 text-center">FR</span>
+                <span className="w-6 text-center">{language === "fr" ? "FR" : "EN"}</span>
               </Button>
-              
+
               {/* Bouton télécharger CV */}
               <Button 
                 variant="outline" 
@@ -89,7 +90,7 @@ export default function Header() {
               </Button>
             </div>
           </nav>
-          
+
           {/* Mobile Navigation Toggle */}
           <div className="md:hidden flex items-center space-x-3">
             {/* Bouton FR/EN désactivé pour l'instant - version mobile */}
@@ -97,11 +98,12 @@ export default function Header() {
               variant="outline" 
               size="sm" 
               className="flex items-center gap-2 border-red-500 text-red-600 hover:bg-red-50"
+              onClick={toggleLanguage}
             >
               <Globe className="h-4 w-4" />
-              <span className="w-6 text-center">FR</span>
+              <span className="w-6 text-center">{language === "fr" ? "FR" : "EN"}</span>
             </Button>
-            
+
             <button 
               className="focus:outline-none" 
               onClick={toggleMobileMenu} 
@@ -111,7 +113,7 @@ export default function Header() {
             </button>
           </div>
         </div>
-        
+
         {/* Mobile Navigation Menu */}
         <div className={`md:hidden ${isMobileMenuOpen ? "block" : "hidden"}`}>
           <ul className="py-3 space-y-2 border-t">
