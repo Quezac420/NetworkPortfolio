@@ -9,7 +9,7 @@ export function MusicCard() {
 
   return (
     <div 
-      className="relative p-6 rounded-lg bg-gradient-to-br from-red-50 to-white dark:from-red-900/20 dark:to-gray-800 border border-red-100 dark:border-red-700 overflow-hidden"
+      className="relative p-6 rounded-lg bg-gradient-to-br from-red-50 to-white dark:from-gray-800 dark:to-gray-900 border border-red-100 dark:border-red-700 overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -47,7 +47,7 @@ export function DeadpoolCard() {
 
   return (
     <div 
-      className="relative p-6 rounded-lg bg-gradient-to-br from-red-50 to-white dark:from-red-900/20 dark:to-gray-800 border border-red-100 dark:border-red-700 overflow-hidden"
+      className="relative p-6 rounded-lg bg-gradient-to-br from-red-50 to-white dark:from-gray-800 dark:to-gray-900 border border-red-100 dark:border-red-700 overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

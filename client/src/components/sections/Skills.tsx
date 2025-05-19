@@ -21,7 +21,7 @@ export default function Skills() {
             <h2 className="text-3xl font-bold text-center bg-gradient-to-r from-red-600 to-red-800 text-transparent bg-clip-text">Mes compétences</h2>
             <DeadpoolLogo className="h-8 w-8 ml-3" />
           </div>
-          
+
           <div className="relative bg-white dark:bg-gray-800 rounded-lg p-6 border-2 border-red-500 shadow-lg max-w-3xl mx-auto mb-12">
             <div className="absolute -top-3 -right-3 bg-red-600 rounded-full p-1.5">
               <Server className="h-5 w-5 text-white" />
@@ -30,9 +30,9 @@ export default function Skills() {
               Spécialiste en <span className="font-bold text-red-600">administration système et réseau</span>, je maîtrise les technologies clés pour construire et maintenir des infrastructures IT robustes et sécurisées. Mes compétences techniques reflètent ma passion pour l'excellence opérationnelle.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            <div className="bg-white p-6 rounded-lg border-2 border-red-500 shadow-md relative">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border-2 border-red-500 shadow-md relative">
               <div className="absolute -top-4 left-4 bg-white px-4 py-1 border-2 border-red-600 rounded-full flex items-center space-x-2">
                 <Server className="h-5 w-5 text-red-600" />
                 <h3 className="text-xl font-bold text-red-600">Compétences techniques</h3>
@@ -54,8 +54,8 @@ export default function Skills() {
                 ))}
               </div>
             </div>
-            
-            <div className="bg-white p-6 rounded-lg border-2 border-red-500 shadow-md relative">
+
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border-2 border-red-500 shadow-md relative">
               <div className="absolute -top-4 left-4 bg-white px-4 py-1 border-2 border-red-600 rounded-full flex items-center space-x-2">
                 <Code className="h-5 w-5 text-red-600" />
                 <h3 className="text-xl font-bold text-red-600">Compétences en développement</h3>
@@ -77,7 +77,7 @@ export default function Skills() {
                 ))}
               </div>
             </div>
-            
+
             <div className="md:col-span-2 mt-8">
               <div className="flex items-center justify-center mb-6">
                 <Award className="h-6 w-6 text-red-600 mr-2" />

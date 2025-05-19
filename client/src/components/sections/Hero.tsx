@@ -9,7 +9,7 @@ export default function Hero() {
     <section id="home" className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
       <DeadpoolBackground />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row items-center p-6 border-4 border-red-600 rounded-lg bg-white shadow-lg relative">
+        <div className="flex flex-col md:flex-row items-center p-6 border-4 border-red-600 rounded-lg bg-white dark:bg-gray-800 shadow-lg relative">
           <div className="absolute top-4 right-4">
             <DeadpoolLogo className="h-10 w-10" />
           </div>

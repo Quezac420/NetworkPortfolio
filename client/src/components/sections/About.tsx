@@ -47,7 +47,7 @@ export default function About() {
                   {language === 'fr' ? 'Spécialisation en administration système et réseau' : 'Specialization in system and network administration'}
                 </strong>
               </div>
-              <p>
+              <p className="text-gray-700 dark:text-gray-200">
                 {language === 'fr' ? (
                   <>Je maîtrise à la fois les aspects théoriques et pratiques des infrastructures informatiques, 
                   de la cybersécurité, et des solutions de télécommunications modernes. Je m'intéresse particulièrement 
@@ -83,7 +83,7 @@ export default function About() {
                     <h3 className="ml-3 font-bold text-lg text-red-600">Passionné de Musique</h3>
                   </div>
 
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 dark:text-gray-200">
                     J'adore jouer et composer dans mon temps libre, la musique est une source d'inspiration constante.
                   </p>
 
@@ -107,7 +107,7 @@ export default function About() {
                     <h3 className="ml-3 font-bold text-lg text-red-600">Fan de Deadpool</h3>
                   </div>
 
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 dark:text-gray-200">
                     L'humour et la résilience de ce personnage m'inspirent au quotidien et se reflètent dans mon approche de résolution de problèmes.
                   </p>
 
@@ -148,7 +148,7 @@ export default function About() {
                       <CalendarDays className="h-4 w-4 text-red-600 mr-2" />
                       <p className="font-medium text-red-700">2023</p>
                     </div>
-                    <p className="font-bold text-gray-800">
+                    <p className="font-bold text-gray-800 dark:text-gray-200">
                       {language === 'fr' ? 'Baccalauréat MATHS NSI' : 'High School Diploma in Mathematics and Computer Science'}
                     </p>
                     <p className="text-sm text-gray-600">
