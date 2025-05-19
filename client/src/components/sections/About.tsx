@@ -74,7 +74,7 @@ export default function About() {
               <div className="flex-1">
                 {/* Remplace la carte MusicPassion par une version simplifiée */}
                 <div 
-                  className="relative p-6 rounded-lg bg-gradient-to-br from-red-50 to-white border border-red-100 overflow-hidden group"
+                  className="relative p-6 rounded-lg bg-gradient-to-br from-red-50 to-white dark:from-gray-900 dark:to-gray-950 border border-red-100 dark:border-red-700 overflow-hidden group"
                 >
                   <div className="flex items-center mb-3">
                     <div className="p-2 rounded-full bg-red-100">
@@ -98,7 +98,7 @@ export default function About() {
               <div className="flex-1">
                 {/* Remplace la carte DeadpoolPassion par une version simplifiée */}
                 <div 
-                  className="relative p-6 rounded-lg bg-gradient-to-br from-red-50 to-white border border-red-100 overflow-hidden group"
+                  className="relative p-6 rounded-lg bg-gradient-to-br from-red-50 to-white dark:from-gray-900 dark:to-gray-950 border border-red-100 dark:border-red-700 overflow-hidden group"
                 >
                   <div className="flex items-center mb-3">
                     <div className="p-2 rounded-full bg-red-100">
