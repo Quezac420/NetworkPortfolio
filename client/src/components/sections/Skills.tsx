@@ -22,7 +22,7 @@ export default function Skills() {
             <DeadpoolLogo className="h-8 w-8 ml-3" />
           </div>
           
-          <div className="relative bg-white rounded-lg p-6 border-2 border-red-500 shadow-lg max-w-3xl mx-auto mb-12">
+          <div className="relative bg-white dark:bg-gray-800 rounded-lg p-6 border-2 border-red-500 shadow-lg max-w-3xl mx-auto mb-12">
             <div className="absolute -top-3 -right-3 bg-red-600 rounded-full p-1.5">
               <Server className="h-5 w-5 text-white" />
             </div>

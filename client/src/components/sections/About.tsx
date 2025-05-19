@@ -27,9 +27,9 @@ export default function About() {
             <DeadpoolLogo className="h-8 w-8 ml-3" />
           </div>
 
-          <div className="space-y-6 text-gray-700 relative">
+          <div className="space-y-6 text-gray-700 dark:text-gray-300 relative">
             <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-red-500 to-red-700"></div>
-            <p className="pl-4 text-gray-700 dark:text-gray-300">
+            <p className="pl-4 text-gray-700 dark:text-gray-200">
               {language === 'fr' ? (
                 <>Je suis actuellement en <strong className="text-red-600">deuxième année de BUT Réseaux et Télécommunications</strong>, où j'acquiers 
                 des compétences techniques solides dans la conception, l'installation et la maintenance des 
@@ -120,20 +120,20 @@ export default function About() {
           </div>
 
           <Card className="mt-12 border-2 border-red-500 shadow-md">
-            <CardContent className="p-6">
+            <CardContent className="p-6 dark:bg-gray-800">
               <div className="flex items-center mb-4">
                 <GraduationCap className="h-6 w-6 text-red-600 mr-2" />
-                <h3 className="text-xl font-semibold">{language === 'fr' ? 'Formation' : 'Education'}</h3>
+                <h3 className="text-xl font-semibold dark:text-gray-200">{language === 'fr' ? 'Formation' : 'Education'}</h3>
               </div>
               <ul className="space-y-6">
-                <li className="relative pl-8 pb-6 border-l-2 border-red-200">
+                <li className="relative pl-8 pb-6 border-l-2 border-red-200 dark:border-red-400">
                   <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-red-600"></div>
                   <div>
                     <div className="flex items-center mb-1">
                       <CalendarDays className="h-4 w-4 text-red-600 mr-2" />
-                      <p className="font-medium text-red-700">2023 - {language === 'fr' ? 'Présent' : 'Present'}</p>
+                      <p className="font-medium text-red-700 dark:text-red-400">2023 - {language === 'fr' ? 'Présent' : 'Present'}</p>
                     </div>
-                    <p className="font-bold text-gray-800">
+                    <p className="font-bold text-gray-800 dark:text-gray-200">
                       {language === 'fr' ? 'BUT Réseaux et Télécommunications' : 'Bachelor in Networks and Telecommunications'}
                     </p>
                     <p className="text-sm text-gray-600">

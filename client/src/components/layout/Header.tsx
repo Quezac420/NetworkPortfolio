@@ -21,16 +21,16 @@ export default function Header() {
           <a href="/#" className="text-xl font-bold text-red-600 hover:text-red-700">Portfolio Mathis</a>
 
           <div className="hidden md:flex items-center space-x-6">
-            <a href="/#about" className="text-gray-600 hover:text-red-600">
+            <a href="/#about" className="text-gray-600 dark:text-gray-200 hover:text-red-600">
               {language === "fr" ? "À propos" : "About"}
             </a>
-            <a href="/#skills" className="text-gray-600 hover:text-red-600">
+            <a href="/#skills" className="text-gray-600 dark:text-gray-200 hover:text-red-600">
               {language === "fr" ? "Compétences" : "Skills"}
             </a>
-            <a href="/#projects" className="text-gray-600 hover:text-red-600">
+            <a href="/#projects" className="text-gray-600 dark:text-gray-200 hover:text-red-600">
               {language === "fr" ? "Projets" : "Projects"}
             </a>
-            <a href="/#disponibilite" className="text-gray-600 hover:text-red-600">
+            <a href="/#disponibilite" className="text-gray-600 dark:text-gray-200 hover:text-red-600">
               {language === "fr" ? "Disponibilité" : "Availability"}
             </a>
           </div>
