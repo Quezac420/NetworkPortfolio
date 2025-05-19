@@ -6,6 +6,7 @@ import Home from "@/pages/Home";
 import ProjectDetail from "@/pages/ProjectDetail";
 import NotFound from "@/pages/not-found";
 import React, { useState, createContext, useCallback } from "react";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 
 type Language = 'fr' | 'en';
 
