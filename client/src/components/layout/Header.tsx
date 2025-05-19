@@ -1,99 +1,48 @@
-import { useState, useEffect, useContext } from "react";
-import { Menu, Download, Globe } from "lucide-react";
-import { useLocation } from "wouter";
-import { DeadpoolLogo } from "@/components/ui/deadpool-logo";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { Download, Globe } from "lucide-react";
+import { useContext } from "react";
 import { LanguageContext } from "@/App";
 
 export default function Header() {
   const { language, toggleLanguage } = useContext(LanguageContext);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [location] = useLocation();
-  const isHomePage = location === "/";
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const navItems = [
-    { href: isHomePage ? "#home" : "/", label: language === "fr" ? "Accueil" : "Home" },
-    { href: isHomePage ? "#about" : "/#about", label: language === "fr" ? "À propos" : "About" },
-    { href: isHomePage ? "#skills" : "/#skills", label: language === "fr" ? "Compétences" : "Skills" },
-    { href: isHomePage ? "#projects" : "/#projects", label: language === "fr" ? "Projets" : "Projects" },
-    { href: isHomePage ? "#contact" : "/#contact", label: language === "fr" ? "Disponibilité" : "Availability" }
-  ];
 
   const openCV = () => {
     window.open('/cv.html', '_blank');
   };
 
   return (
-    <header className={`fixed w-full bg-white ${isScrolled ? "bg-opacity-95 shadow-sm" : "bg-opacity-95"} z-50 transition-all duration-300`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <a href="/" className="flex items-center space-x-2">
-            <DeadpoolLogo className="h-8 w-8" />
-            <span className="text-xl font-bold text-red-600">Mathis Torres</span>
-          </a>
+    <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
+      <div className="container mx-auto px-4">
+        <nav className="flex justify-between items-center h-16">
+          <Link href="/">
+            <a className="text-xl font-bold text-red-600">MT</a>
+          </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <ul className="flex space-x-8">
-              {navItems.map((item, index) => (
-                <li key={index}>
-                  <a 
-                    href={item.href} 
-                    className="text-gray-800 hover:text-red-600 transition-colors"
-                    onClick={closeMobileMenu}
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          <div className="hidden md:flex items-center space-x-6">
+            <Link href="/#about">
+              <a className="text-gray-600 hover:text-red-600">
+                {language === "fr" ? "À propos" : "About"}
+              </a>
+            </Link>
+            <Link href="/#skills">
+              <a className="text-gray-600 hover:text-red-600">
+                {language === "fr" ? "Compétences" : "Skills"}
+              </a>
+            </Link>
+            <Link href="/#projects">
+              <a className="text-gray-600 hover:text-red-600">
+                {language === "fr" ? "Projets" : "Projects"}
+              </a>
+            </Link>
+            <Link href="/#contact">
+              <a className="text-gray-600 hover:text-red-600">
+                {language === "fr" ? "Contact" : "Contact"}
+              </a>
+            </Link>
+          </div>
 
-            <div className="flex items-center space-x-3">
-              {/* Bouton FR/EN désactivé pour l'instant */}
-              <Button 
-                variant="outline" 
-                size="sm" 
-                className="flex items-center gap-2 border-red-500 text-red-600 hover:bg-red-50"
-                onClick={toggleLanguage}
-              >
-                <Globe className="h-4 w-4" />
-                <span className="w-6 text-center">{language === "fr" ? "FR" : "EN"}</span>
-              </Button>
-
-              {/* Bouton télécharger CV */}
-              <Button 
-                variant="outline" 
-                size="sm" 
-                className="flex items-center gap-2 border-red-500 text-red-600 hover:bg-red-50"
-                onClick={openCV}
-              >
-                <Download className="h-4 w-4" />
-                <span>CV</span>
-              </Button>
-            </div>
-          </nav>
-
-          {/* Mobile Navigation Toggle */}
-          <div className="md:hidden flex items-center space-x-3">
-            {/* Bouton FR/EN désactivé pour l'instant - version mobile */}
+          <div className="flex items-center space-x-3">
             <Button 
               variant="outline" 
               size="sm" 
@@ -104,44 +53,17 @@ export default function Header() {
               <span className="w-6 text-center">{language === "fr" ? "FR" : "EN"}</span>
             </Button>
 
-            <button 
-              className="focus:outline-none" 
-              onClick={toggleMobileMenu} 
-              aria-label="Menu"
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="flex items-center gap-2 border-red-500 text-red-600 hover:bg-red-50"
+              onClick={openCV}
             >
-              <Menu className="h-6 w-6" />
-            </button>
+              <Download className="h-4 w-4" />
+              <span>CV</span>
+            </Button>
           </div>
-        </div>
-
-        {/* Mobile Navigation Menu */}
-        <div className={`md:hidden ${isMobileMenuOpen ? "block" : "hidden"}`}>
-          <ul className="py-3 space-y-2 border-t">
-            {navItems.map((item, index) => (
-              <li key={index}>
-                <a 
-                  href={item.href} 
-                  className="block py-2 px-4 hover:bg-gray-100"
-                  onClick={closeMobileMenu}
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-            <li className="py-2 px-4">
-              {/* Bouton télécharger CV - version mobile */}
-              <Button 
-                variant="outline" 
-                size="sm" 
-                className="flex items-center gap-2 border-red-500 text-red-600 hover:bg-red-50"
-                onClick={openCV}
-              >
-                <Download className="h-4 w-4" />
-                <span>CV</span>
-              </Button>
-            </li>
-          </ul>
-        </div>
+        </nav>
       </div>
     </header>
   );

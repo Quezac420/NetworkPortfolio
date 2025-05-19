@@ -11,25 +11,19 @@ import Contact from "@/components/sections/Contact";
 export type LanguageType = 'fr' | 'en';
 
 export default function Home() {
-  // État de langue au niveau de la page d'accueil
-  const [language, setLanguage] = useState<LanguageType>('fr');
-  
-  // Fonction pour changer la langue
-  const toggleLanguage = () => {
-    setLanguage(prevLang => prevLang === 'fr' ? 'en' : 'fr');
-  };
+  const { language } = useContext(LanguageContext);
   
   return (
     <div>
-      <Header language={language} toggleLanguage={toggleLanguage} />
+      <Header />
       <main>
         <Hero />
-        <About language={language} />
-        <Skills language={language} />
-        <Projects language={language} />
-        <Contact language={language} />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
       </main>
-      <Footer language={language} />
+      <Footer />
     </div>
   );
 }
